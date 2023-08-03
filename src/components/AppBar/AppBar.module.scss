@@ -1,9 +1,17 @@
 .header {
-  padding: 24px;
-
   background-color: var(--header-background-color);
-  height: 168px;
+
   border-bottom: 1px solid var(--primary-color);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 168px;
+  padding: 24px;
 }
 .wrapper {
   display: flex;
@@ -18,11 +26,4 @@
 
   font-size: 24px;
   line-height: 1.38;
-}
-.lang {
-  width: 69px;
-  height: 48px;
-  background-color: var(--primary-background-color);
-  border-radius: 8px;
-  box-shadow: 2px 4px 9px 0px #a68dae47;
 }

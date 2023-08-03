@@ -14,6 +14,7 @@ body {
   background-position: top;
   background-size: auto;
   font-family: var(--primary-font);
+  color: var(--primary-text-color);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,4 +48,9 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
 }
