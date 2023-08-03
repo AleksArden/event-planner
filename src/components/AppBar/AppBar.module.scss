@@ -1,0 +1,28 @@
+.header {
+  padding: 24px;
+
+  background-color: var(--header-background-color);
+  height: 168px;
+  border-bottom: 1px solid var(--primary-color);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+.title {
+  color: var(--primary-color);
+
+  font-family: var(--header-font);
+  font-weight: 400;
+
+  font-size: 24px;
+  line-height: 1.38;
+}
+.lang {
+  width: 69px;
+  height: 48px;
+  background-color: var(--primary-background-color);
+  border-radius: 8px;
+  box-shadow: 2px 4px 9px 0px #a68dae47;
+}
