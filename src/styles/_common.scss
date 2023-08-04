@@ -1,0 +1,108 @@
+@import 'styles/_global-vars.scss';
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: url('../../assets/backgroundImage/backgroundImage.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: auto;
+  font-family: 'Poppins', sans-serif;
+  color: #3f3f3f;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.react-datepicker-popper .react-datepicker {
+  border: none;
+  border-radius: 0;
+}
+.react-datepicker__month-container {
+  border-radius: 11px;
+
+  width: 240px;
+  height: 348px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  box-shadow: 0px 0px 14px 0px #00000012;
+}
+
+.react-datepicker__month-container .react-datepicker__header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.react-datepicker__header .react-datepicker__current-month {
+  color: #3f3f3f;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  margin-bottom: 20px;
+}
+.react-datepicker__day-names .react-datepicker__day-name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #3f3f3f;
+  margin-bottom: 24px;
+}
+.react-datepicker__day-names .react-datepicker__day-name:first-child,
+.react-datepicker__day-names .react-datepicker__day-name:last-child {
+  color: #ff2b77;
+}
+.react-datepicker__week > .react-datepicker__day {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #aca7c3;
+  margin: 6px 2px;
+  padding: 6px 4px;
+}
+.react-datepicker__week > .react-datepicker__day--keyboard-selected {
+  border-radius: 0;
+  background-color: #7b61ff;
+}

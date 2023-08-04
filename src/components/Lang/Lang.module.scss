@@ -1,13 +1,15 @@
+@import 'styles/_mixins.scss';
+@import 'styles/_global-vars.scss';
+
 .lang {
-  display: flex;
-  align-items: center;
+  @include flexed(center);
   gap: 1px;
   width: 69px;
   height: 48px;
-  background-color: var(--primary-background-color);
+  background-color: getBackgroundColor('primary');
   padding: 12px;
   border-radius: 8px;
-  box-shadow: 2px 4px 9px 0px #a68dae47;
+  box-shadow: getShadow('main');
 }
 .nameLang {
   font-weight: 500;
@@ -17,7 +19,7 @@
 .iconLang {
   width: 24px;
   height: 24px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath stroke='%233F3F3F' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m7 10 5 5 5-5'/%3e%3c/svg%3e");
+  background-image: getIcon('arrow-lang');
   background-repeat: no-repeat;
   background-size: contain;
 }

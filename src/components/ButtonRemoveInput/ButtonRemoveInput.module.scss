@@ -1,0 +1,17 @@
+@import 'styles/_global-vars.scss';
+
+.button {
+  position: absolute;
+  top: 38px;
+  right: 12px;
+  background-color: getBackgroundColor('primary');
+}
+
+.iconRemoveInput {
+  width: 24px;
+  height: 24px;
+  background-image: getIcon('remove-input');
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}

@@ -7,12 +7,12 @@ const ButtonBar = () => {
   return (
     <ul className={styles.container}>
       <li>
-        <button className={styles.white}>
+        <button className={styles.white} type="button">
           <div className={styles.iconCategory}></div>
         </button>
       </li>
       <li>
-        <button className={styles.white}>
+        <button className={styles.white} type="button">
           <div className={styles.iconSortBy}></div>
         </button>
       </li>

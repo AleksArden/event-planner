@@ -27,3 +27,14 @@
   height: 156px;
   resize: none;
 }
+.selectDate {
+  @extend %inputCreate;
+  width: 240px;
+}
+.react-datepicker__month-container {
+  width: 240px;
+  height: 348px;
+}
+.react-datepicker {
+  font-family: getFont('primary');
+}

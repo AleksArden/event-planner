@@ -1,27 +1,27 @@
-.header {
-  background-color: var(--header-background-color);
+@import 'styles/_global-vars.scss';
+@import 'styles/_mixins.scss';
 
-  border-bottom: 1px solid var(--primary-color);
+.header {
+  background-color: getBackgroundColor('header');
+
+  border-bottom: 1px solid getColor('primary');
 }
 .container {
-  display: flex;
+  @include flexed(null, space-between);
+
   flex-direction: column;
-  justify-content: space-between;
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+  @include mobile-width();
   height: 168px;
   padding: 24px;
 }
 .wrapper {
-  display: flex;
-  align-items: center;
+  @include flexed();
   gap: 56px;
 }
 .title {
-  color: var(--primary-color);
+  color: getColor('primary');
 
-  font-family: var(--header-font);
+  font-family: getFont('header');
   font-weight: 400;
 
   font-size: 24px;

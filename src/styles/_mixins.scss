@@ -1,0 +1,10 @@
+@mixin flexed($al-it: center, $jc: null) {
+  display: flex;
+  align-items: $al-it;
+  justify-content: $jc;
+}
+@mixin mobile-width($mar-l: auto, $mar-r: auto) {
+  max-width: 320px;
+  margin-left: $mar-l;
+  margin-right: $mar-r;
+}

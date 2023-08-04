@@ -1,0 +1,48 @@
+$fonts: (
+  'primary': 'Poppins',
+  'header': 'Alata',
+);
+@function getFont($key) {
+  @return map-get($fonts, $key);
+}
+$colors: (
+  'primary': #7b61ff,
+  'primary-text': #3f3f3f,
+  'placeholder-text': #888888,
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+$background-colors: (
+  'primary': #ffffff,
+  'header': #fefcff,
+);
+@function getBackgroundColor($key) {
+  @return map-get($background-colors, $key);
+}
+
+$icons: (
+  'arrow-back':
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath stroke='%237B61FF' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4 12h16M4 12l6-6m-6 6 6 6'/%3e%3c/svg%3e"),
+  'arrow-lang':
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath stroke='%233F3F3F' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m7 10 5 5 5-5'/%3e%3c/svg%3e"),
+  'remove-input':
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath stroke='%237B61FF' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m16 8-8 8m0-8 8 8'/%3e%3c/svg%3e"),
+  'search':
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath fill='%237B61FF' d='M19.47 20.53a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM17.25 10.5a6.75 6.75 0 0 1-6.75 6.75v1.5a8.25 8.25 0 0 0 8.25-8.25h-1.5Zm-6.75 6.75a6.75 6.75 0 0 1-6.75-6.75h-1.5a8.25 8.25 0 0 0 8.25 8.25v-1.5ZM3.75 10.5a6.75 6.75 0 0 1 6.75-6.75v-1.5a8.25 8.25 0 0 0-8.25 8.25h1.5Zm6.75-6.75a6.75 6.75 0 0 1 6.75 6.75h1.5a8.25 8.25 0 0 0-8.25-8.25v1.5Zm10.03 15.72-4.187-4.188-1.06 1.06 4.187 4.188 1.06-1.06Z'/%3e%3c/svg%3e"),
+  'category':
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath stroke='%237B61FF' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m4 4 5 8v6l6 3v-9l5-8H4Z'/%3e%3c/svg%3e"),
+  'sort-by':
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath stroke='%233F3F3F' stroke-linecap='round' stroke-width='1.5' d='M14 5a2 2 0 1 0-4 0m4 0a2 2 0 1 1-4 0m4 0h6M10 5H4m12 7a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm0 0H4m4 7a2 2 0 1 0-4 0 2 2 0 0 0 4 0Zm0 0h12'/%3e%3c/svg%3e"),
+  'add':
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M12 4v16m-8-8h16'/%3e%3c/svg%3e"),
+);
+@function getIcon($key) {
+  @return map-get($icons, $key);
+}
+$box-shadow: (
+  'main': 2px 4px 9px 0px #a68dae47,
+);
+@function getShadow($key) {
+  @return map-get($box-shadow, $key);
+}
