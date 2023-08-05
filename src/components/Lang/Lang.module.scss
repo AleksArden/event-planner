@@ -1,5 +1,6 @@
 @import 'styles/_mixins.scss';
 @import 'styles/_global-vars.scss';
+@import 'styles/_placeholder.scss';
 
 .lang {
   @include flexed(center);
@@ -17,9 +18,6 @@
   line-height: 1;
 }
 .iconLang {
-  width: 24px;
-  height: 24px;
+  @extend %icon;
   background-image: getIcon('arrow-lang');
-  background-repeat: no-repeat;
-  background-size: contain;
 }

@@ -15,23 +15,14 @@
   background-color: getColor('primary');
 }
 .iconCategory {
-  width: 24px;
-  height: 24px;
+  @extend %icon;
   background-image: getIcon('category');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .iconSortBy {
-  width: 24px;
-  height: 24px;
+  @extend %icon;
   background-image: getIcon('sort-by');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .iconAdd {
-  width: 24px;
-  height: 24px;
+  @extend %icon;
   background-image: getIcon('add');
-  background-repeat: no-repeat;
-  background-size: contain;
 }

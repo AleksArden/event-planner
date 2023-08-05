@@ -1,5 +1,6 @@
 @import 'styles/_mixins.scss';
 @import 'styles/_global-vars.scss';
+@import 'styles/_placeholder.scss';
 .link {
   @include flexed(center);
   gap: 4px;
@@ -7,11 +8,8 @@
 }
 
 .iconArrow {
-  width: 24px;
-  height: 24px;
+  @extend %icon;
   background-image: getIcon('arrow-back');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .back {
   color: getColor('primary');

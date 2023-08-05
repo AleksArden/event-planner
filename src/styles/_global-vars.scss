@@ -9,6 +9,7 @@ $colors: (
   'primary': #7b61ff,
   'primary-text': #3f3f3f,
   'placeholder-text': #888888,
+  'white': #ffffff,
 );
 @function getColor($key) {
   @return map-get($colors, $key);
@@ -16,6 +17,7 @@ $colors: (
 $background-colors: (
   'primary': #ffffff,
   'header': #fefcff,
+  'accent': #7b61ff,
 );
 @function getBackgroundColor($key) {
   @return map-get($background-colors, $key);

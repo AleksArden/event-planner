@@ -1,5 +1,27 @@
 @import 'styles/_placeholder.scss';
+@import 'styles/_mixins.scss';
 .selectDate {
   @extend %inputCreate;
   width: 240px;
+}
+
+.buttonCancel {
+  @extend %buttonSelectDate;
+  width: 75px;
+  height: 32px;
+
+  border: 1px solid getColor('primary');
+  background-color: getBackgroundColor('primary');
+
+  color: getColor('primary');
+  margin-right: 10px;
+}
+.buttonChooseDate {
+  @extend %buttonSelectDate;
+  width: 110px;
+  height: 32px;
+
+  background-color: getBackgroundColor('accent');
+
+  color: getColor('white');
 }

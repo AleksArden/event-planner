@@ -1,4 +1,5 @@
 @import 'styles/_global-vars.scss';
+@import 'styles/_placeholder.scss';
 
 .button {
   position: absolute;
@@ -8,10 +9,6 @@
 }
 
 .iconRemoveInput {
-  width: 24px;
-  height: 24px;
+  @extend %icon;
   background-image: getIcon('remove-input');
-
-  background-repeat: no-repeat;
-  background-size: contain;
 }

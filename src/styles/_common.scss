@@ -55,21 +55,24 @@ button {
   border: 0;
   cursor: pointer;
 }
-
+label .react-datepicker {
+  border: none;
+  border-radius: 11px;
+  width: 240px;
+  height: 348px;
+  box-shadow: 0px 0px 14px 0px #00000012;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .react-datepicker-popper .react-datepicker {
   border: none;
   border-radius: 0;
 }
 .react-datepicker__month-container {
-  border-radius: 11px;
-
-  width: 240px;
-  height: 348px;
   font-family: 'Poppins';
   font-weight: 500;
   font-size: 14px;
   line-height: 1.43;
-  box-shadow: 0px 0px 14px 0px #00000012;
 }
 
 .react-datepicker__month-container .react-datepicker__header {
@@ -82,6 +85,7 @@ button {
   font-size: 14px;
   line-height: 1.43;
   margin-bottom: 20px;
+  margin-top: 8px;
 }
 .react-datepicker__day-names .react-datepicker__day-name {
   font-weight: 400;
@@ -103,6 +107,70 @@ button {
   padding: 6px 4px;
 }
 .react-datepicker__week > .react-datepicker__day--keyboard-selected {
-  border-radius: 0;
   background-color: #7b61ff;
+}
+.react-datepicker__week > .react-datepicker__day--keyboard-selected:hover {
+  background-color: #6243ff;
+}
+.react-datepicker .react-datepicker__week > .react-datepicker__day--selected {
+  background-color: #7b61ff;
+  color: #aca7c3;
+}
+.react-datepicker__week > .react-datepicker__day--today {
+  color: #7b61ff;
+}
+
+.react-datepicker__week > .react-datepicker__day--selected:hover {
+  background-color: #6243ff;
+}
+
+.react-datepicker__time-container .react-datepicker__time {
+  width: 240px;
+  height: 160px;
+  padding: 0px 16px 0px 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 2px 4px 9px 0px #a68dae47;
+}
+
+.react-datepicker .react-datepicker__header,
+.react-datepicker__header--time {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+.react-datepicker
+  .react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list {
+  height: 160px;
+}
+.react-datepicker
+  .react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box {
+  width: 100%;
+}
+.react-datepicker
+  .react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list
+  li.react-datepicker__time-list-item {
+  padding: 15.5px;
+  border-bottom: 1px solid #aca7c3;
+  gap: 24px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+
+  letter-spacing: 0em;
+  text-align: center;
+}
+.react-datepicker .react-datepicker__children-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }

@@ -5,24 +5,47 @@ import styles from './FormCreation.module.scss';
 import SelectDate from 'components/SelectDate/SelectDate';
 import ButtonSelect from 'components/ButtonSelect/ButtonSelect';
 import { format } from 'date-fns';
+import SelectTime from 'components/SelectTime/SelectTime';
 
 const FormCreation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [startDate, setStartDate] = useState(new Date());
+  const [isOpenDate, setIsOpenDate] = useState(false);
+  const [isOpenTime, setIsOpenTime] = useState(false);
+  const [chooseDate, setChooseDate] = useState('');
+  console.log(isOpenDate);
+  console.log(isOpenTime);
 
-  const handleChange = (date: Date) => {
-    setIsOpen(!isOpen);
-    const result = format(date, 'dd/MM/yyyy');
-    formik.setFieldValue('selectDate', result);
+  const handleChangeDate = (date: Date) => {
+    setChooseDate(format(date, 'dd/MM/yyyy'));
+    setStartDate(date);
   };
-  const handleClick = (evt: React.MouseEvent) => {
+  const handleChooseDate = () => {
+    formik.setFieldValue('selectDate', chooseDate);
+    setIsOpenDate(!isOpenDate);
+  };
+  const hahdleCancel = () => {
+    formik.setFieldValue('selectDate', '');
+    setIsOpenDate(!isOpenDate);
+  };
+  const handleChangeTime = (time: Date) => {
+    setIsOpenTime(!isOpenTime);
+    const result = format(time, 'h:mm aa');
+    formik.setFieldValue('selectTime', result);
+  };
+  const handleClickDate = (evt: React.MouseEvent) => {
     evt.preventDefault();
-    setIsOpen(!isOpen);
+    setIsOpenDate(!isOpenDate);
+  };
+  const handleClickTime = (evt: React.MouseEvent) => {
+    evt.preventDefault();
+    setIsOpenTime(!isOpenTime);
   };
   const formik = useFormik({
     initialValues: {
       title: '',
       description: '',
       selectDate: '',
+      selectTime: '',
     },
 
     onSubmit: values => {
@@ -67,11 +90,31 @@ const FormCreation = () => {
           readOnly
           value={formik.values.selectDate}
         />
-        <ButtonSelect onClick={handleClick} isOpen={isOpen} />
-        {isOpen && <SelectDate onChange={handleChange} />}
+        <ButtonSelect onClick={handleClickDate} isOpen={isOpenDate} />
+        {isOpenDate && (
+          <SelectDate
+            onChange={handleChangeDate}
+            selected={startDate}
+            onClickCancel={hahdleCancel}
+            onClickChooseDate={handleChooseDate}
+          />
+        )}
       </label>
-
-      <button type="submit">Submit</button>
+      <label className={styles.label} htmlFor="selectTime">
+        Select time
+        <input
+          className={styles.input}
+          id="selectTime"
+          name="selectTime"
+          readOnly
+          value={formik.values.selectTime}
+        />
+        <ButtonSelect onClick={handleClickTime} isOpen={isOpenTime} />
+        {isOpenTime && <SelectTime onChange={handleChangeTime} />}
+      </label>
+      <button className={styles.button} type="submit">
+        Add event
+      </button>
     </form>
   );
 };
