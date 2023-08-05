@@ -1,0 +1,17 @@
+@import 'styles/_global-vars.scss';
+@import 'styles/_placeholder.scss';
+
+.button {
+  position: absolute;
+  top: 38px;
+  right: 12px;
+  background-color: getBackgroundColor('primary');
+}
+.iconDownSmall {
+  @extend %icon;
+  background-image: getIcon('down-small');
+}
+.iconUpSmall {
+  @extend %icon;
+  background-image: getIcon('up-small');
+}

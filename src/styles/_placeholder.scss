@@ -18,7 +18,7 @@
 
   padding: 16px 12px 16px 12px;
   border-radius: 8px;
-
+  font-family: getFont('Primary');
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -27,4 +27,10 @@
   &:focus {
     border-color: getColor('primary');
   }
+}
+%icon {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

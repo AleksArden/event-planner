@@ -1,0 +1,5 @@
+@import 'styles/_placeholder.scss';
+.selectDate {
+  @extend %inputCreate;
+  width: 240px;
+}
