@@ -6,6 +6,8 @@ import SelectDate from 'components/SelectDate/SelectDate';
 import ButtonSelect from 'components/ButtonSelect/ButtonSelect';
 import { format } from 'date-fns';
 import SelectTime from 'components/SelectTime/SelectTime';
+import { addDataToFirestore } from 'firebase/addData';
+import { Event } from 'types/evnt';
 
 const FormCreation = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -40,16 +42,17 @@ const FormCreation = () => {
     evt.preventDefault();
     setIsOpenTime(!isOpenTime);
   };
+  const initialValues: Event = {
+    title: '',
+    description: '',
+    selectDate: '',
+    selectTime: '',
+  };
   const formik = useFormik({
-    initialValues: {
-      title: '',
-      description: '',
-      selectDate: '',
-      selectTime: '',
-    },
+    initialValues,
 
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+      addDataToFirestore(values);
     },
   });
 
