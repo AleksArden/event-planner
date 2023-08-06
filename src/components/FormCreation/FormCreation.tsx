@@ -6,7 +6,7 @@ import SelectDate from 'components/SelectDate/SelectDate';
 import ButtonSelect from 'components/ButtonSelect/ButtonSelect';
 import { format } from 'date-fns';
 import SelectTime from 'components/SelectTime/SelectTime';
-import { addDataToFirestore } from 'firebase/addData';
+import { addDataToFirestore } from '../../firebase/addData';
 import { Event } from 'types/evnt';
 
 const FormCreation = () => {
@@ -14,8 +14,6 @@ const FormCreation = () => {
   const [isOpenDate, setIsOpenDate] = useState(false);
   const [isOpenTime, setIsOpenTime] = useState(false);
   const [chooseDate, setChooseDate] = useState('');
-  console.log(isOpenDate);
-  console.log(isOpenTime);
 
   const handleChangeDate = (date: Date) => {
     setChooseDate(format(date, 'dd/MM/yyyy'));

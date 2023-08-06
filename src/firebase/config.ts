@@ -1,13 +1,13 @@
 import { initializeApp, getApps } from 'firebase/app';
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  apiKey: 'AIzaSyAqr3CAhKv4E2QtyHX4RZsdIc0AZH4fo1k',
+  authDomain: 'event-planner-d0cf6.firebaseapp.com',
+  projectId: 'event-planner-d0cf6',
+  storageBucket: 'event-planner-d0cf6.appspot.com',
+  messagingSenderId: '458682976596',
+  appId: '1:458682976596:web:9bfd49a1046abdaad460c1',
+  measurementId: 'G-P3V0Z70MEE',
 };
 
 let firebase_app =

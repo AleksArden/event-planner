@@ -11,7 +11,7 @@ const SelectTime = ({ onChange }: IProps) => {
       onChange={onChange}
       showTimeSelect
       showTimeSelectOnly
-      timeIntervals={1}
+      timeIntervals={5}
       inline
       dateFormat="Pp"
     />
