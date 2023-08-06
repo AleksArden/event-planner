@@ -1,0 +1,10 @@
+@import 'styles/_global-vars.scss';
+
+.container {
+  width: 272px;
+  height: 480px;
+  background-color: getBackgroundColor('primary');
+
+  border-radius: 12px;
+  box-shadow: getShadow('main');
+}

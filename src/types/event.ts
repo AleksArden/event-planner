@@ -6,3 +6,8 @@ export type Event = {
   location: string;
   addPicture: string;
 };
+
+export type EventWithId = {
+  data: Event;
+  eventId: string;
+};

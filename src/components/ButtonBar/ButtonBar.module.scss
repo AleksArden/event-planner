@@ -5,6 +5,7 @@
 .container {
   @include flexed(null, flex-end);
   gap: 16px;
+  margin-bottom: 40px;
 }
 .white {
   @extend %buttonBar;

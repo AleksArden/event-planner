@@ -6,7 +6,7 @@ import SelectDate from 'components/SelectDate/SelectDate';
 import ButtonSelect from 'components/ButtonSelect/ButtonSelect';
 import { format } from 'date-fns';
 import SelectTime from 'components/SelectTime/SelectTime';
-import { addDataToFirestore } from '../../firebase/addData';
+import { addEventToFirestore } from '../../firebase/addEvent';
 import { Event } from 'types/event';
 import { uploadPhotoToStorage } from '../../firebase/uploadPhotoToStorage';
 
@@ -67,7 +67,7 @@ const FormCreation = () => {
     initialValues,
 
     onSubmit: values => {
-      addDataToFirestore(values);
+      addEventToFirestore(values);
     },
   });
 
