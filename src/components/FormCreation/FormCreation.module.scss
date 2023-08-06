@@ -12,6 +12,7 @@
   position: relative;
   display: block;
   color: getColor('primary');
+  font-family: getFont('Primary');
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -27,6 +28,31 @@
   height: 156px;
   resize: none;
 }
+
+.label:nth-child(6) .input {
+  display: none;
+}
+.wrapper {
+  @extend %inputCreate;
+
+  overflow: scroll;
+
+  &:focus {
+    border-color: getColor('primary');
+  }
+  &:hover {
+    border-color: getColor('primary');
+  }
+}
+.text {
+  width: 200px;
+  overflow: scroll;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+}
+
 .button {
   width: 240px;
   height: 56px;

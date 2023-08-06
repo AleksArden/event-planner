@@ -7,13 +7,15 @@ import ButtonSelect from 'components/ButtonSelect/ButtonSelect';
 import { format } from 'date-fns';
 import SelectTime from 'components/SelectTime/SelectTime';
 import { addDataToFirestore } from '../../firebase/addData';
-import { Event } from 'types/evnt';
+import { Event } from 'types/event';
+import { uploadPhotoToStorage } from '../../firebase/uploadPhotoToStorage';
 
 const FormCreation = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [isOpenDate, setIsOpenDate] = useState(false);
   const [isOpenTime, setIsOpenTime] = useState(false);
   const [chooseDate, setChooseDate] = useState('');
+  const [imageURL, setImageURL] = useState('');
 
   const handleChangeDate = (date: Date) => {
     setChooseDate(format(date, 'dd/MM/yyyy'));
@@ -40,11 +42,26 @@ const FormCreation = () => {
     evt.preventDefault();
     setIsOpenTime(!isOpenTime);
   };
+  const handleChangeImage = async (
+    evt: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    if (evt.target.files !== null) {
+      const file = evt.target.files[0];
+      const imageURL = await uploadPhotoToStorage(file);
+      if (imageURL) {
+        setImageURL(imageURL);
+        formik.setFieldValue('addPicture', imageURL);
+      }
+    }
+  };
+
   const initialValues: Event = {
     title: '',
     description: '',
     selectDate: '',
     selectTime: '',
+    location: '',
+    addPicture: '',
   };
   const formik = useFormik({
     initialValues,
@@ -62,7 +79,6 @@ const FormCreation = () => {
           className={styles.input}
           id="title"
           name="title"
-          type="text"
           onChange={formik.handleChange}
           value={formik.values.title}
         />
@@ -112,6 +128,32 @@ const FormCreation = () => {
         />
         <ButtonSelect onClick={handleClickTime} isOpen={isOpenTime} />
         {isOpenTime && <SelectTime onChange={handleChangeTime} />}
+      </label>
+      <label htmlFor="location" className={styles.label}>
+        Location
+        <input
+          className={styles.input}
+          id="location"
+          name="location"
+          onChange={formik.handleChange}
+          value={formik.values.location}
+        />
+        <ButtonRemoveInput />
+      </label>
+
+      <label htmlFor="addPicture" className={styles.label}>
+        Add picture
+        <div className={styles.wrapper}>
+          <p className={styles.text}>{imageURL}</p>
+        </div>
+        <input
+          className={styles.input}
+          id="addPicture"
+          name="addPicture"
+          type="file"
+          onChange={handleChangeImage}
+        />
+        <ButtonRemoveInput />
       </label>
       <button className={styles.button} type="submit">
         Add event

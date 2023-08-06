@@ -3,4 +3,6 @@ export type Event = {
   description: string;
   selectDate: string;
   selectTime: string;
+  location: string;
+  addPicture: string;
 };
