@@ -1,0 +1,6 @@
+@import 'styles/_mixins.scss';
+
+.container {
+  @include mobile-width();
+  padding: 40px 24px;
+}

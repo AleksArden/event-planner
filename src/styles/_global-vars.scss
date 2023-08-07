@@ -8,6 +8,7 @@ $fonts: (
 $colors: (
   'primary': #7b61ff,
   'primary-text': #3f3f3f,
+  'secondary-text': #49454f,
   'placeholder-text': #888888,
   'white': #ffffff,
 );
@@ -48,6 +49,7 @@ $icons: (
 }
 $box-shadow: (
   'main': 2px 4px 9px 0px #a68dae47,
+  'secondary': 4px 5px 9px 0px #a68dae47,
 );
 @function getShadow($key) {
   @return map-get($box-shadow, $key);

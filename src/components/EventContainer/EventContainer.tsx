@@ -14,7 +14,7 @@ const EventContainer = () => {
   const getAllEvents = () => {
     onSnapshot(collection(db, 'event-planner'), data => {
       if (data) {
-        setEvents(data.docs.map(doc => ({ ...doc.data(), eventId: doc.id })));
+        setEvents(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
       }
     });
   };
@@ -25,9 +25,8 @@ const EventContainer = () => {
   return (
     <ul className={styles.container}>
       {events?.map((event: EventWithId) => {
-        console.log(events);
-        console.log(event?.addPicture);
-        return <EventItem key={event.eventId} event={event} />;
+        console.log(event);
+        return <EventItem key={event.id} event={event} />;
       })}
     </ul>
   );

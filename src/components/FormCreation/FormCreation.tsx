@@ -7,7 +7,7 @@ import ButtonSelect from 'components/ButtonSelect/ButtonSelect';
 import { format } from 'date-fns';
 import SelectTime from 'components/SelectTime/SelectTime';
 import { addEventToFirestore } from '../../firebase/addEvent';
-import { Event } from 'types/event';
+import { EventWithoutId } from 'types/event';
 import { uploadPhotoToStorage } from '../../firebase/uploadPhotoToStorage';
 
 const FormCreation = () => {
@@ -50,18 +50,18 @@ const FormCreation = () => {
       const imageURL = await uploadPhotoToStorage(file);
       if (imageURL) {
         setImageURL(imageURL);
-        formik.setFieldValue('addPicture', imageURL);
+        formik.setFieldValue('imageURL', imageURL);
       }
     }
   };
 
-  const initialValues: Event = {
+  const initialValues: EventWithoutId = {
     title: '',
     description: '',
     selectDate: '',
     selectTime: '',
-    location: '',
-    addPicture: '',
+    city: '',
+    imageURL: '',
   };
   const formik = useFormik({
     initialValues,
@@ -129,14 +129,14 @@ const FormCreation = () => {
         <ButtonSelect onClick={handleClickTime} isOpen={isOpenTime} />
         {isOpenTime && <SelectTime onChange={handleChangeTime} />}
       </label>
-      <label htmlFor="location" className={styles.label}>
+      <label htmlFor="city" className={styles.label}>
         Location
         <input
           className={styles.input}
-          id="location"
-          name="location"
+          id="city"
+          name="city"
           onChange={formik.handleChange}
-          value={formik.values.location}
+          value={formik.values.city}
         />
         <ButtonRemoveInput />
       </label>

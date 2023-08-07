@@ -1,0 +1,88 @@
+@import 'styles/_placeholder.scss';
+@import 'styles/_mixins.scss';
+@import 'styles/_global-vars.scss';
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.container {
+  width: 100%;
+  height: 464px;
+  background-color: getBackgroundColor('primary');
+  border-radius: 8px;
+  box-shadow: getShadow('main');
+}
+.img {
+  width: 100%;
+  height: 168px;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.wrapper {
+  width: 100%;
+  padding: 24px 16px 40px;
+}
+.description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: getColor('secondary-text');
+  margin-bottom: 24px;
+}
+.wrapperCity {
+  @include flexed(center, center);
+  width: 53px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: getBackgroundColor('primary');
+  box-shadow: getShadow('secondary');
+  margin-bottom: 12px;
+}
+.city {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: getColor('primary');
+}
+.wrapperDate {
+  @include flexed(center, center);
+  width: 139px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: getBackgroundColor('primary');
+  box-shadow: getShadow('secondary');
+  margin-bottom: 40px;
+}
+.date {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: getColor('primary');
+}
+.wrapperBtn {
+  @include flexed(center, space-between);
+}
+.edit {
+  @extend %button;
+  @extend %buttonWhite;
+  width: 108px;
+  height: 32px;
+}
+.delete {
+  @extend %button;
+  @extend %buttonPurple;
+  width: 108px;
+  height: 32px;
+}

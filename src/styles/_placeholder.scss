@@ -35,12 +35,24 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-%buttonSelectDate {
+%button {
   padding: 8px 16px 8px 16px;
   border-radius: 4px;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.33;
-
+  letter-spacing: 0em;
   text-align: center;
+}
+
+%buttonWhite {
+  border: 1px solid getColor('primary');
+  background-color: getBackgroundColor('primary');
+
+  color: getColor('primary');
+}
+%buttonPurple {
+  background-color: getBackgroundColor('accent');
+
+  color: getColor('white');
 }
