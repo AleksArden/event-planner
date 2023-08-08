@@ -21,6 +21,9 @@
   @include mq(tab) {
     width: 332px;
   }
+  @include mq(desk) {
+    width: 302px;
+  }
   .img {
     width: 272px;
     height: 100%;
@@ -33,6 +36,9 @@
       width: 332px;
       height: 336px;
       transition: width getAnimation('animation');
+    }
+    @include mq(desk) {
+      width: 320px;
     }
   }
 

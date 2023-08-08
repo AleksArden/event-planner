@@ -12,6 +12,9 @@
     gap: 24px;
     margin-bottom: 24px;
   }
+  @include mq(desk) {
+    margin-bottom: 40px;
+  }
 }
 .btnCategory {
   @extend %buttonBar;
@@ -21,6 +24,10 @@
     @include flexed(center, center);
     gap: 12px;
     width: 143px;
+  }
+  @include mq(desk) {
+    gap: 16px;
+    width: 148px;
   }
 }
 
@@ -38,6 +45,9 @@
     line-height: 1.5;
     letter-spacing: 0em;
     text-align: left;
+  }
+  @include mq(desk) {
+    color: getColor('primary-text');
   }
 }
 
@@ -102,6 +112,9 @@
 .iconCategory {
   @extend %icon;
   background-image: getIcon('category');
+  @include mq(desk) {
+    background-image: getIcon('category-second');
+  }
 }
 .iconSortBy {
   @extend %icon;

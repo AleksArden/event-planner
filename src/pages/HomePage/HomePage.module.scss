@@ -8,6 +8,11 @@
     @include container-width(768px);
     padding: 40px;
   }
+  @include mq(desk) {
+    @include container-width(1440px);
+    position: relative;
+    padding: 60px 80px;
+  }
 }
 
 .title {
@@ -22,5 +27,10 @@
     line-height: 1.5;
     letter-spacing: 0em;
     text-align: left;
+  }
+  @include mq(desk) {
+    position: absolute;
+    top: 60px;
+    left: 80px;
   }
 }
