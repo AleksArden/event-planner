@@ -14,6 +14,13 @@
   @include mq(tab) {
     font-size: 32px;
   }
+
+  @include mq(desk) {
+    margin-left: 326px;
+
+    font-family: Poppins;
+    font-size: 32px;
+  }
 }
 .container {
   width: 100%;
@@ -26,6 +33,12 @@
   @include mq(tab) {
     width: 688px;
     min-height: 504px;
+  }
+  @include mq(desk) {
+    width: 628px;
+    min-height: 492px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .img {
@@ -40,12 +53,18 @@
     width: 688px;
     height: 272px;
   }
+  @include mq(desk) {
+    width: 628px;
+  }
 }
 .wrapper {
   width: 100%;
   padding: 24px 16px 40px;
   @include mq(tab) {
     padding: 24px 24px 40px;
+  }
+  @include mq(desk) {
+    padding: 20px 24px 40px;
   }
 }
 .description {
@@ -58,6 +77,9 @@
   line-height: 1.43;
   letter-spacing: 0px;
   text-align: left;
+  @include mq(desk) {
+    margin-bottom: 20px;
+  }
 }
 .wrapperCity {
   display: inline-flex;
@@ -73,6 +95,9 @@
   box-shadow: getShadow('secondary');
   @include mq(tab) {
     margin-bottom: 40px;
+  }
+  @include mq(desk) {
+    margin-bottom: 24px;
   }
 }
 .city {
@@ -99,6 +124,9 @@
   @include mq(tab) {
     display: inline-flex;
     margin-left: 12px;
+  }
+  @include mq(desk) {
+    margin-bottom: 24px;
   }
 }
 .date {

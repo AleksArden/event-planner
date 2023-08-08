@@ -32,6 +32,9 @@
   @include mq(tab) {
     width: 308px;
   }
+  @include mq(desk) {
+    width: 372px;
+  }
 
   &::placeholder {
     color: getColor('placeholder-color');

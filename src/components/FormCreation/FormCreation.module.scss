@@ -11,7 +11,7 @@
 
   box-shadow: getShadow('main');
   @include mq(tab) {
-    padding: 40px 24px;
+    padding: 40px 40px;
   }
 }
 
@@ -24,6 +24,11 @@
   margin-bottom: 24px;
   @include mq(tab) {
     height: 508px;
+  }
+  @include mq(desk) {
+    height: 282px;
+    margin-bottom: 60px;
+    gap: 24px 42px;
   }
 }
 .label {

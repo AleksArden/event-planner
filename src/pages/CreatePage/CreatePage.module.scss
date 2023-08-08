@@ -8,6 +8,11 @@
     @include container-width(768px);
     padding: 40px;
   }
+  @include mq(desk) {
+    @include container-width(1440px);
+    position: relative;
+    padding: 18px 80px 60px;
+  }
 }
 .title {
   margin-bottom: 24px;

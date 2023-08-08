@@ -79,6 +79,10 @@ label .react-datepicker {
     width: 308px;
     height: 316px;
   }
+  @media screen and (min-width: 1440px) {
+    width: 372px;
+    height: 316px;
+  }
 }
 
 .react-datepicker__month-container .react-datepicker__header {
@@ -98,8 +102,8 @@ label .react-datepicker {
 }
 .react-datepicker__day-names .react-datepicker__day-name {
   margin-bottom: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   font-weight: 400;
   font-size: 12px;
@@ -111,7 +115,7 @@ label .react-datepicker {
   color: #ff2b77;
 }
 .react-datepicker__week > .react-datepicker__day {
-  margin: 8px 5px;
+  margin: 8px 10px;
   padding: 6px 4px;
 
   color: #aca7c3;
@@ -157,6 +161,9 @@ label .react-datepicker {
   box-shadow: 2px 4px 9px 0px #a68dae47;
   @media screen and (min-width: 768px) {
     width: 308px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 372px;
   }
 }
 
@@ -211,5 +218,9 @@ label .react-datepicker {
   @media screen and (min-width: 768px) {
     gap: 10px;
     margin-left: 67px;
+  }
+  @media screen and (min-width: 1440px) {
+    gap: 10px;
+    margin-left: 130px;
   }
 }
