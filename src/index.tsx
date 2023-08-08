@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="event-planner">
+    <BrowserRouter basename="/event-planner">
       <App />
     </BrowserRouter>
   </React.StrictMode>

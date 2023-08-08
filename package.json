@@ -1,8 +1,8 @@
 {
   "name": "event-planner",
-  "version": "0.1.0",
-  "homepage": "https://aleksarden.github.io/event-planner/",
+  "version": "0.2.0",
   "private": true,
+  "homepage": "https://AleksArden.github.io/event-planner/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.17.0",
