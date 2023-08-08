@@ -3,30 +3,56 @@
 @import 'styles/_placeholder.scss';
 
 .form {
+  position: relative;
+
   @include flexed();
   gap: 6px;
+
   width: 272px;
   height: 48px;
   padding: 12px;
+
   border-radius: 10px;
   background-color: getBackgroundColor('primary');
+
   box-shadow: getShadow('main');
+
+  @include mq(tab) {
+    position: absolute;
+    left: 267px;
+    top: 26px;
+
+    width: 368px;
+  }
 }
 .button {
   background-color: getBackgroundColor('primary');
+
   @extend %icon;
   background-image: getIcon('search');
 }
 .input {
   display: inline-block;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1;
+
   border: none;
   outline: none;
-}
 
-.input::placeholder {
+  color: getColor('primary');
+
+  font-family: getFont('primary');
   font-size: 14px;
-  color: getColor('placeholder-text');
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-align: left;
+
+  &::placeholder {
+    color: getColor('placeholder-text');
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }

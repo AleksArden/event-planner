@@ -1,6 +1,12 @@
 @import 'styles/_mixins.scss';
 
 .container {
-  @include mobile-width();
+  @include container-width();
+
   padding: 40px 24px;
+  @include mq(tab) {
+    @include container-width(768px);
+
+    padding: 40px;
+  }
 }

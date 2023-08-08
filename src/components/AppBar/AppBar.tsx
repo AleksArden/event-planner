@@ -1,5 +1,6 @@
 import Lang from 'components/Lang/Lang';
 import SearchBar from 'components/SearchBar/SearchBar';
+
 import styles from './AppBar.module.scss';
 
 const AppBar = () => {

@@ -1,5 +1,6 @@
 import { useLocation, Link } from 'react-router-dom';
 import { EventWithId } from 'types/event';
+
 import styles from './EventItem.module.scss';
 
 interface IProps {

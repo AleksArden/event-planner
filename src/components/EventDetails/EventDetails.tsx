@@ -1,10 +1,14 @@
-import { getEventFromFirestore } from '../../firebase/getEvent';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+
+import { getEventFromFirestore } from '../../firebase/getEvent';
 import { EventWithoutId } from 'types/event';
+import { deleteEventFromFirestore } from '../../firebase/deleteEvent';
+
 import styles from './EventDetails.module.scss';
 
 const EventDetails = () => {
+  const navigate = useNavigate();
   const [event, setEvent] = useState<EventWithoutId | undefined>();
   const date = event?.selectDate.split('/').splice(0, 2).join('.');
   const { eventId } = useParams<{ eventId?: string }>();
@@ -18,6 +22,12 @@ const EventDetails = () => {
     };
     fetchData();
   }, [eventId]);
+  const handleDelete = async () => {
+    if (eventId !== undefined) {
+      await deleteEventFromFirestore(eventId);
+      navigate('/', { replace: true });
+    }
+  };
   return (
     <>
       <p className={styles.title}>{event?.title}</p>
@@ -37,7 +47,11 @@ const EventDetails = () => {
             <button className={styles.edit} type="button">
               Edit
             </button>
-            <button className={styles.delete} type="button">
+            <button
+              onClick={handleDelete}
+              className={styles.delete}
+              type="button"
+            >
               Delete event
             </button>
           </div>

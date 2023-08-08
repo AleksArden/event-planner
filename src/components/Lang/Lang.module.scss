@@ -5,17 +5,22 @@
 .lang {
   @include flexed(center);
   gap: 1px;
+
   width: 69px;
   height: 48px;
-  background-color: getBackgroundColor('primary');
   padding: 12px;
+
   border-radius: 8px;
+
+  background-color: getBackgroundColor('primary');
   box-shadow: getShadow('main');
 }
 .nameLang {
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .iconLang {
   @extend %icon;

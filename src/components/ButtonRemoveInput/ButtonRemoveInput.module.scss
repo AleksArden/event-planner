@@ -3,8 +3,10 @@
 
 .button {
   position: absolute;
-  top: 38px;
+  top: 50%;
   right: 12px;
+  transform: translateY(-50%);
+
   background-color: getBackgroundColor('primary');
 }
 

@@ -5,15 +5,99 @@
 .container {
   @include flexed(null, flex-end);
   gap: 16px;
+
   margin-bottom: 40px;
+
+  @include mq(tab) {
+    gap: 24px;
+    margin-bottom: 24px;
+  }
 }
-.white {
+.btnCategory {
   @extend %buttonBar;
   background-color: getBackgroundColor('primary');
+
+  @include mq(tab) {
+    @include flexed(center, center);
+    gap: 12px;
+    width: 143px;
+  }
 }
-.purple {
+
+.nameCategory {
+  display: none;
+
+  @include mq(tab) {
+    display: inline;
+
+    color: getColor('primary');
+
+    font-family: getFont('primary');
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.btnSortBy {
+  @extend %buttonBar;
+  background-color: getBackgroundColor('primary');
+
+  @include mq(tab) {
+    @include flexed(center, center);
+    gap: 16px;
+    width: 129px;
+  }
+}
+.nameSortBy {
+  display: none;
+
+  @include mq(tab) {
+    display: inline;
+
+    color: getColor('primary-text');
+
+    font-family: getFont('primary');
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+.btnAdd {
   @extend %buttonBar;
   background-color: getColor('primary');
+
+  transition: background-color getAnimation('animation');
+
+  &:hover,
+  &:focus {
+    background-color: getColor('hover');
+  }
+  @include mq(tab) {
+    @include flexed();
+
+    width: 193px;
+  }
+}
+.nameAdd {
+  display: none;
+
+  @include mq(tab) {
+    display: inline;
+
+    color: getColor('white');
+
+    font-family: getFont('primary');
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 .iconCategory {
   @extend %icon;

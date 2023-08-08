@@ -1,9 +1,10 @@
+import { Routes, Route } from 'react-router-dom';
+
 import Layout from 'components/Layout/Layout';
 import CreatePage from 'pages/CreatePage/CreatePage';
 import EventPage from 'pages/EventPage/EventPage';
 import HomePage from 'pages/HomePage/HomePage';
 
-import { Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <Routes>

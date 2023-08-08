@@ -1,12 +1,15 @@
 import DatePicker from 'react-datepicker';
-import styles from './SelectDate.module.scss';
 import 'react-datepicker/dist/react-datepicker.css';
+
+import styles from './SelectDate.module.scss';
+
 interface IProps {
   onChange: (evt: Date) => void;
   selected: Date;
   onClickCancel: () => void;
   onClickChooseDate: () => void;
 }
+
 const SelectDate = ({
   onChange,
   selected,

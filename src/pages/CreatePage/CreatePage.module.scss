@@ -1,12 +1,25 @@
 @import 'styles/_mixins.scss';
 
 .container {
-  @include mobile-width();
+  @include container-width();
+
   padding: 40px 24px;
+  @include mq(tab) {
+    @include container-width(768px);
+    padding: 40px;
+  }
 }
 .title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.5;
   margin-bottom: 24px;
+
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  text-align: left;
+
+  @include mq(tab) {
+    font-size: 32px;
+    line-height: 48px;
+  }
 }

@@ -1,6 +1,5 @@
 import DatePicker from 'react-datepicker';
 
-// import 'react-datepicker/dist/react-datepicker.css';
 interface IProps {
   onChange: (time: Date) => void;
 }

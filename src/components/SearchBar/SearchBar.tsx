@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import ButtonRemoveInput from 'components/ButtonRemoveInput/ButtonRemoveInput';
 
 import styles from './SearchBar.module.scss';
+
 const SearchBar = () => {
   const [value, setValue] = useState('');
+
   const handleSubmit = () => {};
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
@@ -15,6 +18,7 @@ const SearchBar = () => {
         onChange={evt => setValue(evt.target.value)}
         value={value}
       />
+      {value && <ButtonRemoveInput onClick={() => setValue('')} />}
     </form>
   );
 };

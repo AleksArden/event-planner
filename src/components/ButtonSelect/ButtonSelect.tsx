@@ -1,8 +1,8 @@
-import React from 'react';
 import styles from './ButtonSelect.module.scss';
+
 interface IProps {
-  onClick: (evt: React.MouseEvent) => void;
-  isOpen: boolean;
+  onClick?: (evt: React.MouseEvent) => void;
+  isOpen?: boolean;
 }
 const ButtonSelect = ({ onClick, isOpen }: IProps) => {
   return (

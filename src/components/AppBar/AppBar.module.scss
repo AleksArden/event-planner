@@ -3,27 +3,41 @@
 
 .header {
   background-color: getBackgroundColor('header');
-
   border-bottom: 1px solid getColor('primary');
 }
 .container {
-  @include flexed(null, space-between);
+  @include mq(mob-only) {
+    @include flexed(null, space-between);
+    flex-direction: column;
+  }
+  @include container-width();
 
-  flex-direction: column;
-  @include mobile-width();
   height: 168px;
   padding: 24px;
+
+  @include mq(tab) {
+    @include container-width(768px);
+    position: relative;
+
+    height: 92px;
+    padding: 26px 33px 18px;
+  }
 }
 .wrapper {
   @include flexed();
   gap: 56px;
+
+  @include mq(tab) {
+    gap: 479px;
+  }
 }
 .title {
   color: getColor('primary');
 
   font-family: getFont('header');
-  font-weight: 400;
-
   font-size: 24px;
+  font-weight: 400;
   line-height: 1.38;
+  letter-spacing: 0em;
+  text-align: left;
 }

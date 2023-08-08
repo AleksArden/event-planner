@@ -1,43 +1,61 @@
 @import 'styles/_global-vars.scss';
+@import 'styles/_mixins.scss';
 
 %buttonBar {
   display: block;
   width: 56px;
   height: 56px;
-  border-radius: 8px;
   padding: 16px;
+
+  border-radius: 8px;
   box-shadow: getShadow('main');
 }
 %inputCreate {
   display: block;
-  width: 100%;
+  width: 240px;
   height: 56px;
-  outline: none;
-  border: 1px solid #aca7c3;
   margin-top: 6px;
-
   padding: 16px 12px 16px 12px;
+
+  outline: none;
   border-radius: 8px;
+  border: 1px solid getColor('placeholder-color');
+
   font-family: getFont('primary');
   color: getColor('primary-text');
+
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-
+  letter-spacing: 0px;
   text-align: left;
-  &:focus {
-    border-color: getColor('primary');
+  @include mq(tab) {
+    width: 308px;
+  }
+
+  &::placeholder {
+    color: getColor('placeholder-color');
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    text-align: left;
   }
 }
 %icon {
   width: 24px;
   height: 24px;
+
   background-repeat: no-repeat;
   background-size: contain;
 }
 %button {
   padding: 8px 16px 8px 16px;
+
   border-radius: 4px;
+
+  font-family: getFont('primary');
   font-size: 12px;
   font-weight: 500;
   line-height: 1.33;
@@ -47,12 +65,11 @@
 
 %buttonWhite {
   border: 1px solid getColor('primary');
-  background-color: getBackgroundColor('primary');
 
   color: getColor('primary');
+  background-color: getBackgroundColor('primary');
 }
 %buttonPurple {
-  background-color: getBackgroundColor('accent');
-
   color: getColor('white');
+  background-color: getBackgroundColor('accent');
 }

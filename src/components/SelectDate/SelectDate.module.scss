@@ -1,5 +1,6 @@
 @import 'styles/_placeholder.scss';
 @import 'styles/_mixins.scss';
+@import 'styles/_global-vars.scss';
 .selectDate {
   @extend %inputCreate;
   width: 240px;
@@ -11,11 +12,26 @@
   width: 75px;
   height: 32px;
 
+  transition: color getAnimation('animation'),
+    background-color getAnimation('animation');
   margin-right: 10px;
+
+  &:hover,
+  &:focus {
+    color: getColor('white');
+    background-color: getColor('hover');
+  }
 }
 .buttonChooseDate {
   @extend %button;
   @extend %buttonPurple;
   width: 110px;
   height: 32px;
+
+  transition: background-color getAnimation('animation');
+
+  &:hover,
+  &:focus {
+    background-color: getColor('hover');
+  }
 }
