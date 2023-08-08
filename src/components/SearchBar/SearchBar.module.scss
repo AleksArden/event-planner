@@ -23,6 +23,12 @@
     top: 26px;
 
     width: 368px;
+    @include mq(desk) {
+      left: 700px;
+      top: 22px;
+
+      width: 410px;
+    }
   }
 }
 .button {

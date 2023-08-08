@@ -22,6 +22,10 @@
     height: 92px;
     padding: 26px 33px 18px;
   }
+  @include mq(desk) {
+    @include container-width(1280px);
+    padding: 22px 80px;
+  }
 }
 .wrapper {
   @include flexed();
@@ -29,6 +33,9 @@
 
   @include mq(tab) {
     gap: 479px;
+  }
+  @include mq(desk) {
+    justify-content: space-between;
   }
 }
 .title {
